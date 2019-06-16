@@ -22,7 +22,6 @@ steps:
   displayName: 'Install Node.js'
 
 - script: npm install --only=prod
-- script: npx mocha
 - script: npm install -g @angular/cli
 - script: npm run compile
 - script: mocha test --reporter mocha-junit-reporter
