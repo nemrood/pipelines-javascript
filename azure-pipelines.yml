@@ -22,15 +22,8 @@ steps:
   displayName: 'Install Node.js'
 
 - script: npm install --only=prod
-- script: npm install -g @angular/cli
 - script: npm audit fix
-- script: mocha test --reporter mocha-junit-reporter
-
-- task: PublishTestResults@2
-  condition: succeededOrFailed()
-  inputs:
-    testRunner: JUnit
-    testResultsFiles: '**/TEST-RESULTS.xml'
+- script: npm install -g @angular/cli
 
 - script: npm run build
 
