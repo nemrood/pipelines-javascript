@@ -23,7 +23,7 @@ steps:
 
 - script: npm install --only=prod
 - script: npm install -g @angular/cli
-- script: npm run compile
+- script: npm audit fix
 - script: mocha test --reporter mocha-junit-reporter
 
 - task: PublishTestResults@2
